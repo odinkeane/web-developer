@@ -1,0 +1,69 @@
+body {
+    background: rgb(8, 8, 136);
+    background: radial-gradient(circle, rgba(8, 8, 136, 1) 0%, rgba(2, 0, 36, 1) 59%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+a {
+    color: rgba(8, 8, 136, 1)
+}
+
+h2 {
+    text-align: center;
+    color: black;
+}
+
+form {
+    width: 400px;
+    border-radius: 40px;
+    margin: 40px auto;
+    background-color: rgb(167, 196, 209);
+    padding: 50px 30px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.t {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid rgb(47, 25, 148);
+    outline: none;
+    color: rgba(8, 8, 136, 1)
+}
+
+.check {
+    font-size: 12px;
+    border: none;
+}
+
+.ts {
+    background-color: rgba(8, 8, 136, 1);
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.ts>input:hover {
+    background-color: white;
+    color: rgba(8, 8, 136, 1);
+}
+
+div {
+    padding: 0px;
+    margin: 15px;
+}
+
+.btn {
+    width: max-content;
+    margin: 0 auto;
+}
