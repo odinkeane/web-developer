@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik Mono One', sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+
+body {
+    height: 100vh;
+    background: rgb(9, 9, 121);
+    background: radial-gradient(circle, rgba(9, 9, 121, 1) 17%, rgba(2, 0, 36, 1) 72%);
+}
+
+.gallery>div {
+    width: 40vw;
+    height: 40vw;
+    max-width: 500px;
+    max-height: 500px;
+    background: url(awp.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px black;
+    box-sizing: border-box;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    flex-wrap: wrap;
+    background: rgb(16, 16, 29);
+    background: radial-gradient(circle, rgba(16, 16, 29, 1) 17%, rgba(0, 0, 0, 1) 72%);
+}
+
+
+.numbers h5 {
+    font-size: 60px;
+    text-align: center;
+
+}
+
+.numbers p {
+    font-size: 24px;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    
+
+}
+nav>a{
+    text-decoration: none;
+    flex: 1 0 auto;
+    text-align: center;
+    min-width: 85px;
+}
+
+
+@media screen and (max-width:700px) {
+
+
+    nav{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery>div {
+
+        width: 80vw;
+        height: 80vw;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .numbers {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+}
