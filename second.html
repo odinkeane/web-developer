@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: rgb(7, 26, 3);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        section {
+            justify-content: space-evenly;
+            align-items: center;
+            display: flex;
+        }
+        
+        .loki {
+            background-image: url(loki.jpeg);
+        }
+        
+        .card {
+            width: 600px;
+            height: 337px;
+            border-radius: 24px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 24px;
+            display: inline-block;
+            margin: 50px;
+        }
+        
+        .thor {
+            background-image: url(thor.jpg);
+        }
+        
+        .info {
+            height: 100%;
+            border-radius: 24px;
+            color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            text-align: center;
+            cursor: default;
+        }
+        
+        .info:hover {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            color: rgba(255, 255, 255, 0.549);
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        
+        .loki .info {
+            background-color: rgba(11, 69, 10, 0.4);
+        }
+        
+        .thor .info {
+            background-color: rgb(95, 14, 14, 0.4);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1 style="text-align: center;">Наведитесь на изображения</h1>
+    <section>
+        <div class="card loki">
+            <div class="info">
+                Ради всего времени Навсегда
+            </div>
+        </div>
+        <div class="card thor">
+            <div class="info">
+                Кролик, заводи челнок
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
