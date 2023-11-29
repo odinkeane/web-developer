@@ -1,105 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2vw;
-    margin: 50px;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.modal {
+    background-image: url(back.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 768px;
+    max-height: 768px;
+    height: 700px;
+    flex: 1;
+    box-shadow: 0px 0px 40px rgb(51, 51, 51);
+    background-color: rgba(180, 255, 200, 0.6);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content-image {
+    background-image: url(form.png);
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    filter: opacity(0.9);
+}
+
+.modal-content-info {
+    width: max-content;
+    padding: 20px 40px;
+}
+
+.modal-content-info * {
+    display: block;
+    text-align: center;
+}
+
+.modal-content-info h2 {
+    font-size: 64px;
+}
+
+.modal-content-info input,
+.modal-content-info button {
+    width: 350px;
+    padding: 20px;
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal-content-info button {
+    width: 100%;
+    background-color: rgb(47, 47, 156);
+    border: 3px solid rgb(47, 47, 156);
+    border-radius: 5px;
     color: white;
 }
 
-h1 {
+.modal-content-info input::placeholder {
     text-align: center;
-    padding: 20px;
-}
-
-
-body {
-    height: 100vh;
-    background: rgb(9, 9, 121);
-    background: radial-gradient(circle, rgba(9, 9, 121, 1) 17%, rgba(2, 0, 36, 1) 72%);
-}
-
-.gallery>div {
-    width: 40vw;
-    height: 40vw;
-    max-width: 500px;
-    max-height: 500px;
-    background: url(awp.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: 0px 0px 3px black;
-    box-sizing: border-box;
-}
-
-.numbers {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    flex-wrap: wrap;
-    background: rgb(16, 16, 29);
-    background: radial-gradient(circle, rgba(16, 16, 29, 1) 17%, rgba(0, 0, 0, 1) 72%);
-}
-
-
-.numbers h5 {
-    font-size: 60px;
-    text-align: center;
-
-}
-
-.numbers p {
-    font-size: 24px;
-    text-align: center;
-}
-
-nav{
-    display: flex;
-    
-
-}
-nav>a{
-    text-decoration: none;
-    flex: 1 0 auto;
-    text-align: center;
-    min-width: 85px;
-}
-
-
-@media screen and (max-width:700px) {
-
-
-    nav{
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: repeat(4,1fr);
-    }
-
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .gallery>div {
-
-        width: 80vw;
-        height: 80vw;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .numbers {
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        padding: 20px;
-    }
-
 }
