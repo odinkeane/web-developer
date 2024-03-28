@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-info{
+    background: linear-gradient(to right, 
+    rgba(0,0,0,0.5) 50%, 
+    rgba(255,255,255, 0.5)), 
+    url(back-to-the-future.jpg);
+    padding: 100px;
+    height: 100vh;
+}
+
+main{
+    color: white;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(60,60,200);
+    padding: 100px;
+    text-shadow: 2px 2px 1px white;
+}
+
+.year{
+    font-weight: 800;
+    color: rgb(60,60,200);
+}
+
+.info{
+    width: 300px;
+    margin: 30px 0px 15px;
+    line-height: 1.65;
+}
+
+button{
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+button:hover{
+    color: rgb(60,60,200);
+    border: 1px solid rgb(60,60,200);
+    cursor: pointer;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+
+
+.about-film{
+    background: linear-gradient(to right, rgba(0,0,0,0.95), 
+    rgba(0,0,0,0.9)), url(back.jpg);
+    background-size: cover;
+}
+
+.posters{
+    width: max-content;
+    margin: 0 auto;
+}
+
+.posters img{
+    margin: 0px 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+
+.cast{
+    margin: 0 auto;
+    width: max-content;
+    padding-bottom: 150px;
+}
+
+figure{
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid #FFC700;
+    overflow: hidden;
+    display: inline-block;
+    margin: 10px;
+}
+
+figure img{
+    width: 100%;
+}
+
+figcaption{
+    color: black;
+    background-color: #FFC700;
+    padding: 5px;
+    font-weight: 700;
+}
+
+footer{
+    text-align: center;
+    background-color: #363636;
+    color: white;
+    padding: 30px;
+}
+
+footer p{
+    letter-spacing: 2px;
+}
