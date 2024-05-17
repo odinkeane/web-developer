@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="task3.css">
+</head>
+
+<body>
+    <div class="gallery">
+        <figure class="gallery-image">
+            <img src="1.jpg" alt="">
+            <figcaption>
+                <h3>Слоны</h3>
+                <p>Самые крупные наземные животные на Земле</p>
+            </figcaption>
+        </figure>
+        <figure class="gallery-image">
+            <img src="2.jpg" alt="">
+            <figcaption>
+                <h3>Зебры</h3>
+                <p>Подрод рода лошади, включающий виды бурчеллова зебра, зебра Греви и горная зебра</p>
+            </figcaption>
+        </figure>
+        <figure class="gallery-image">
+            <img src="3.jpg" alt="">
+            <figcaption>
+                <h3>Черепахи</h3>
+                <p>Отряд пресмыкающихся, один из четырёх современных отрядов этого класса</p>
+            </figcaption>
+        </figure>
+        <figure class="gallery-image">
+            <img src="4.jpg" alt="">
+            <figcaption>
+                <h3>Львы</h3>
+                <p>Вид хищных млекопитающих, один из пяти представителей рода пантер, относящегося к подсемейству больших кошек в составе семейства кошачьих</p>
+            </figcaption>
+        </figure>
+        <figure class="gallery-image">
+            <img src="5.jpg" alt="">
+            <figcaption>
+                <h3>Леопарды</h3>
+                <p>Вид хищных млекопитающих, один из пяти представителей рода пантер, относящегося к подсемейству больших кошек в составе семейства кошачьих</p>
+            </figcaption>
+        </figure>
+        <figure class="gallery-image">
+            <img src="6.jpg" alt="">
+            <figcaption>
+                <h3>Зебры</h3>
+                <p>Подрод рода лошади, включающий виды бурчеллова зебра, зебра Греви и горная зебра</p>
+            </figcaption>
+        </figure>
+
+    </div>
+
+
+    <script>
+        const galleryImages = document.querySelectorAll(".gallery-image");
+        for (let element of galleryImages) {
+            element.addEventListener('click', () => {
+                const image = element.children[0].src;
+                document.body.style.background = `linear-gradient(#000000aa, #000000aa), url(${image})`;
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundPosition = "center";
+            })
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
