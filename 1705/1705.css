@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ruda:wght@400..900&display=swap');
+
+
+.carousel{
+    width: 1110px;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+.carousel-element{
+    height: 475px;
+    display: flex;
+    align-items: center;
+    min-width: 1110px;
+    justify-content: space-around;
+    position: relative;
+    box-sizing: border-box;
+    background: white;
+}
+.first{
+    animation: first-block-animate 35s linear infinite;
+}
+
+@keyframes first-block-animate {
+    0%{
+        left: 0px;
+    }
+
+    50%{
+        left: calc(-100%)
+    }
+    50.1%{
+        left: calc(100%);
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+.second{
+    left: 0px;
+    animation: second-block-animate 35s linear infinite;
+}
+
+@keyframes second-block-animate {
+    0%{
+        left: 0;
+    }
+    50%{
+        left: calc(-100%);
+    }
+    50.1%{
+        left: calc(-100%);
+    }
+    100%{
+        left: calc(-100% * 2);
+    }
+}
+
+
+
+
+
+.product{
+    border-radius: 20px;
+    overflow: hidden;
+    width: 255px;
+    font-family: "Montserrat";
+    box-shadow: inset 5px 20px 60px rgba(22, 92, 191, 0.1);
+    
+}
+
+.product-image{
+    width: 100%;
+    height: 188px;
+    object-fit: cover;
+}
+.product-info{
+    padding: 24px;
+}
+
+.product h3{
+    font-size: 14px;
+    font-weight: bold;
+    color: #29292D;
+}
+
+.product-id{
+    font-family: "Ruda";
+    font-size: 12px;
+    color: #B3C0D2;
+    margin: 4px 0px 6px;
+}
+
+.price-favorite{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-price{
+    font-size: 24px;
+    font-weight: 700;
+    color: #002C6A;
+}
+
+h2{
+    color: #002C6A;
+    font-weight: bold;
+    font-family: "Montserrat";
+    padding: 4px;
+    font-size: 48px;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+
+.product-size{
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 18px;
+    display: none;
+    font-size: 16px;
+    font-family: "Ruda";
+    text-transform: uppercase;
+    margin-top: 18px;
+    color: #002C6A;
+    transition: 1s;
+    transform-origin: top;
+}
+
+
+.product:hover .product-size{  
+    display: grid;
+    position: static;
+    cursor: pointer;
+}
