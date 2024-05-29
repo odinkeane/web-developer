@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Urbanist" !important;
+}
+
+
+html{
+    background-color: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+body{
+    max-width: 450px;
+    max-height: 900px;
+    width: 100%;
+    height: 100vh;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+button{
+    all: unset;
+    cursor: pointer;
+    transition: 1s;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+.burger-btn{
+    z-index: 2;
+}
+
+.burger-btn img{
+    transition: 0.5s;
+
+}
+
+
+
+h1{
+    padding: 0px 31px;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.search{
+    padding: 29px 31px;
+    display: flex;
+    height: 54px;
+    display: flex;
+    position: relative;
+}
+
+.search-input{
+    all: unset;
+    background-color: white;
+    flex: auto;
+    border-radius: 100px;
+    padding: 0px 19px;
+}
+
+.search-input::placeholder{
+    color: #bdbdbd;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.search-btn{
+    width: 45px;
+    height: 45px;
+    background-color: #ff6b00;
+    align-self: center;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 40px;
+}
+
+.categories{
+    display: flex;
+    padding: 0px 16px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.category>div{
+    width: 77px;
+    height: 77px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.category figcaption{
+    padding: 11px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, .5);
+    text-transform: capitalize;
+}
+.active-category{
+    font-weight: bold !important;
+    color: black !important;
+}
+
+main{
+    flex: auto;
+}
+
+footer{
+    background-color: white;
+    padding: 24px 31px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+
+footer button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+.active-footer-btn{
+    background-color: #ff6b00;
+}
+
+.active-footer-btn img{
+    filter: invert(1);
+}
+
+.burger-menu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ff6b00;
+    border-radius: 30px;
+    right: 100%;
+    transition: 0.5s ease-out;
+    z-index: 1;
+    padding: 124px 31px 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.burger-menu a{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    gap: 7px;
+    width: max-content;
+}
+
+.burger-menu img{
+    width: 25px;
+    height: 25px;
+}
+
+
+
