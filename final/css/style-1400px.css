@@ -1,0 +1,11 @@
+.footer-links{
+    flex: auto;
+    justify-content: space-evenly;
+    gap: 0px;
+}
+
+.footer-info{
+    gap: 0px;
+    justify-content: space-between;
+}
+

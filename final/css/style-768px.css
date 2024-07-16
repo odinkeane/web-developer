@@ -1,0 +1,59 @@
+.header-nav-button{
+    display: inline-block;
+}
+
+
+.header-nav-block{
+    position: absolute;
+    display: none;
+}
+
+.pre-header{
+    font-size: 14px;
+    justify-content: center;
+    text-align: center;
+}
+
+.pre-header-line{
+    display: none;
+}
+
+h1 span{
+    font-size: 60px;
+}
+
+h1{
+    font-size: 48px;
+    text-align: center;
+}
+
+
+.header-nav-block{
+    display: flex;
+    flex-direction: column;
+    right: 0px;
+    top: -250px;
+    padding: 40px;
+    gap: 40px;
+    background: black;
+    align-items: start;
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+header nav{
+    flex-direction: column;
+    gap: 30px;
+    text-transform: uppercase;
+}
+
+.slider h2{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.slider-element{
+    gap: 5px;
+}
