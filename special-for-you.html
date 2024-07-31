@@ -100,7 +100,16 @@
         ситуациях. Я просто хочу сказать тебе о том, что я счастлив. Я безумно счастлив находясь рядом с тобой, потому
         что ты самое настоящее солнышко.
     </p>
-    <audio src="МОТ.mp3" autoplay type="audio/mpeg" controls></audio>
+    <!-- <audio src="МОТ.mp3" autoplay preload="auto" type="audio/mpeg" ></audio> -->
+
+    <script>
+        const audio = new Audio('МОТ.mp3');
+        window.addEventListener('load', ()=>{
+            audio.play();
+        })
+        
+    </script>
+
 </body>
 
 </html>
