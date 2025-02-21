@@ -19,7 +19,7 @@ window.addEventListener('load', async () => {
         .then(response => response.json())
         .then(data => data.data)
     for (let i = 0; i < data.length; i++) {
-        aside.innerHTML += `<button onClick='setCurrent(${i})'>Задача №${i + 1}</button>`
+        aside.innerHTML += `<button onClick='setCurrent(${i})'>${i + 1}</button>`
     }
     setCurrent(0)
 })
