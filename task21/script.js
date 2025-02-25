@@ -1,11 +1,15 @@
-aside = document.querySelector('aside');
-main = document.querySelector('main');
-markdown = window.markdownit();
+const aside = document.querySelector('aside');
+const main = document.querySelector('main');
+const dataBlock = document.querySelector(".data");
+const nav = document.querySelector('nav');
 
-let data;
+const markdown = window.markdownit();
 
-function setCurrent(i) {
-    main.innerHTML = markdown.render(data[i]);
+let lessons;
+
+function setCurrent(i, title) {
+    data = lessons[title];
+    dataBlock.innerHTML = markdown.render(data[i]);
     for (let j = 0; j < data.length; j++) {
         aside.children[j].style.background = ""
         aside.children[j].style.color = ""
@@ -14,12 +18,28 @@ function setCurrent(i) {
     aside.children[i].style.color = "#FFF";
 }
 
+function setCurrentLesson(button) {
+    for (let children of nav.children) {
+        children.style.borderBottom = "2px solid transparent";
+    }
+    button.style.borderBottom = "2px solid #826A5F"
+
+    const title = button.innerHTML;
+    const data = lessons[title];
+    aside.innerHTML = ""
+    for (let i = 0; i < data.length; i++) {
+        aside.innerHTML += `<button onClick='setCurrent(${i}, "${title}")'>${i + 1}</button>`
+    }
+    setCurrent(0, title)
+}
+
 window.addEventListener('load', async () => {
-    data = await fetch("task.json")
+    lessons = await fetch("task.json")
         .then(response => response.json())
         .then(data => data.data)
-    for (let i = 0; i < data.length; i++) {
-        aside.innerHTML += `<button onClick='setCurrent(${i})'>${i + 1}</button>`
+
+    for (let lesson of Object.keys(lessons)) {
+        nav.innerHTML += `<button onClick='setCurrentLesson(this)'>${lesson}</button>`;
     }
-    setCurrent(0)
+    setCurrentLesson(nav.children[0])
 })

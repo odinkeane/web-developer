@@ -8,20 +8,33 @@
 }
 
 html {
-    background-color: rgba(0, 0, 0, .4);
-    height: 100vh;
     font-size: 20px;
 }
 
-body {
+main {
     background: white;
     margin: 0 auto;
-    padding: 3rem;
+    padding: 1rem 3rem;
     display: flex;
     flex-direction: column;
     height: 100%;
     gap: 2rem;
 }
+nav{
+    padding: 1rem 3rem;
+    display: flex;
+    gap: 1rem;
+    button {
+        border: none;
+        background: white;
+        font-size: 1rem;
+        transition: 0.2s ease;
+        align-content: start;
+        height: 50px;
+        width: max-content;
+    }
+}
+
 
 /* colors = ["#EBA966", "#ECBCB0", "#CE7870", "#826A5F"] */
 aside {
@@ -29,6 +42,7 @@ aside {
     flex-wrap: wrap;
     height: max-content;
     gap: 10px;
+
     button {
         border: none;
         background: white;
@@ -39,15 +53,15 @@ aside {
         width: 50px;
     }
 
-    
-    
+
+
 }
 
 h1 {
     margin-bottom: 1rem;
 }
 
-main{
+.data {
     border-top: 1px solid #826A5F;
     padding-top: 2rem;
 }
