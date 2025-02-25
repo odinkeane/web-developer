@@ -61,6 +61,11 @@ h1 {
     margin-bottom: 1rem;
 }
 
+h2{
+    margin: 1rem 0rem;
+    font-size: 24px;
+}
+
 .data {
     border-top: 1px solid #826A5F;
     padding-top: 2rem;

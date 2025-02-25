@@ -3,13 +3,13 @@ const main = document.querySelector('main');
 const dataBlock = document.querySelector(".data");
 const nav = document.querySelector('nav');
 
-const markdown = window.markdownit();
-
 let lessons;
+
+
 
 function setCurrent(i, title) {
     data = lessons[title];
-    dataBlock.innerHTML = markdown.render(data[i]);
+    dataBlock.innerHTML = marked.parse(data[i]);
     for (let j = 0; j < data.length; j++) {
         aside.children[j].style.background = ""
         aside.children[j].style.color = ""
