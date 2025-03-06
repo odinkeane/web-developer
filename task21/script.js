@@ -5,8 +5,6 @@ const nav = document.querySelector('nav');
 
 let lessons;
 
-
-
 function setCurrent(i, title) {
     data = lessons[title];
     dataBlock.innerHTML = marked.parse(data[i]);
@@ -41,5 +39,5 @@ window.addEventListener('load', async () => {
     for (let lesson of Object.keys(lessons)) {
         nav.innerHTML += `<button onClick='setCurrentLesson(this)'>${lesson}</button>`;
     }
-    setCurrentLesson(nav.children[0])
+    setCurrentLesson(nav.children[3])
 })
