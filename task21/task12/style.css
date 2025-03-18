@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #3949AB;
+    display: flex;
+    height: 100vh;
+}
+
+.logo {
+    position: absolute;
+    top: 68px;
+    left: 68px;
+}
+
+.austronaut-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    color: white;
+    text-align: center;
+}
+
+.register {
+    width: 500px;
+    min-width: 500px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 16px; */
+}
+
+h2 {
+    margin: 16px
+}
+
+
+.input-block {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #d0d0d0;
+    display: flex;
+    width: 358px;
+    gap: 8px;
+
+    input {
+        flex: 1;
+        border: none;
+        outline: none;
+    }
+}
+
+.btn-register {
+    background: #3949AB;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    width: 358px;
+    height: 40px;
+    margin: 16px 0px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn-register:hover {
+    filter: brightness(0.9);
+}
+
+.btn-register:active {
+    transform: scale(0.95);
+}
+
+.password-view-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.password-view-btn:hover {
+    filter: brightness(0.5);
+}
+
+#email-errors-block,
+#password-errors-block {
+    color: red;
+    margin: 0px 0px 16px;
+    text-align: left;
+    font-size: 10px;
+    width: 358px;
+}
