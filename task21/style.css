@@ -70,3 +70,14 @@ h2{
     border-top: 1px solid #826A5F;
     padding-top: 2rem;
 }
+
+
+ul{
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p{
+    margin: 1rem;
+}
