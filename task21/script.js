@@ -39,5 +39,5 @@ window.addEventListener('load', async () => {
     for (let lesson of Object.keys(lessons)) {
         nav.innerHTML += `<button onClick='setCurrentLesson(this)'>${lesson}</button>`;
     }
-    setCurrentLesson(nav.children[4])
+    setCurrentLesson(nav.children[5])
 })
