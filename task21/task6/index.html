@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="grade-calculator">
+        <h1>Калькулятор оценок</h1>
+
+        <div class="controls">
+            <input type="text" id="subject-input" placeholder="Название предмета">
+            <input type="number" id="grade-input" placeholder="Оценка (1-5)" min="1" max="5">
+            <button id="add-btn">Добавить предмет</button>
+        </div>
+
+        <div class="grades-display">
+            <h2>Ваши оценки:</h2>
+            <ul id="grades-list"></ul>
+        </div>
+
+        <div class="results">
+            <h2>Результаты:</h2>
+            <p>Средняя оценка: <span id="average-grade">0</span></p>
+            <p>Статус: <span id="student-status">-</span></p>
+            <div id="grade-chart"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
