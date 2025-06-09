@@ -10,7 +10,7 @@
 }
 
 
-body{
+body {
     background-color: #201F1F;
     padding: 17px 90px;
     color: white;
@@ -18,39 +18,39 @@ body{
 
 
 
-header *{
+header * {
     vertical-align: middle;
 }
 
-.site-title{
+.site-title {
     color: #EE5626;
     font-size: 24px;
     font-weight: bold;
     margin-left: 9px;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: 48px;
     margin: 37px 0px 10px;
 }
 
 
-.author{
+.author {
     width: max-content;
     margin: 19px auto 66px;
 }
 
-.author *{
+.author * {
     vertical-align: middle;
 }
 
-.author figcaption{
+.author figcaption {
     display: inline-block;
     margin-left: 9px;
 }
 
-.author h3{
+.author h3 {
     font-size: 12px;
     font-weight: 600;
     background: linear-gradient(#EE5626 50%, #35109F 91%);
@@ -59,31 +59,38 @@ h1{
     background-clip: text;
 }
 
-.author p{
+.author p {
     font-size: 8px;
 }
 
-.hero{
+.hero {
     max-width: 558px;
     width: 100%;
     margin: 66px auto;
 }
 
-.hero img{
+.hero img {
     width: 100%;
 }
 
-.hero figcaption{
+.hero figcaption {
     font-size: 18px;
     margin-top: 37px;
 }
 
 
-footer{
+footer {
     margin: 62px 0px 44px;
     text-align: center;
 }
 
-.orange-color{
+.orange-color {
     color: #EE5626;
+}
+
+
+@media screen and (max-width: 576px) {
+    body {
+        padding: 17px;
+    }
 }
