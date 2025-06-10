@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .slider {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slider:hover .prev,
+        .slider:hover .next {
+            display: flex;
+        }
+
+        .slider-elements {
+            height: 300px;
+            display: flex;
+            position: relative;
+            transition: 0.2s ease-in-out;
+            left: 0%;
+        }
+
+        .slider-element {
+            min-width: 100%;
+            height: 100%;
+            margin-right: 5%;
+        }
+
+        .slider-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .next,
+        .prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 7px;
+            border-radius: 50%;
+            border: none;
+            opacity: 0.7;
+            display: none;
+        }
+
+        .next {
+            right: 25px;
+        }
+
+        .prev {
+            left: 25px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="slider">
+        <div style="left: 0%;" class="slider-elements">
+        </div>
+        <button class="prev"><svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg></button>
+        <button class="next"><svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+            </svg></button>
+    </div>
+
+    <script>
+
+        let index = 0;
+        const generateSlider = (result) => {
+            const sliderElements = document.querySelector(".slider-elements")
+            const sliderNext = document.querySelector(".next")
+            const sliderPrev = document.querySelector(".prev")
+
+            for (let item of result) {
+                sliderElements.innerHTML += `
+                    <div class="slider-element">
+                        <img class='slider-image' src=${item.image}>  
+                    </div>
+                `
+            }
+            const length = document.querySelectorAll('.slider-element').length
+            sliderNext.addEventListener('click', () => {
+                index = (index + 1) % length
+                sliderElements.style.left = -105 * index + "%"
+                console.log(index);
+            })
+            sliderPrev.addEventListener('click', () => {
+                index = (index - 1 < 0) ? length - 1 : index - 1
+                sliderElements.style.left = -105 * index + "%"
+                console.log(index);
+            })
+        }
+
+        window.addEventListener("DOMContentLoaded", async () => {
+            const result = await fetch("https://odinkeane.github.io/web-developer/react-6/data.json")
+                .then(res => res.json())
+                .then(res => res.articles)
+                .catch(err => console.error(err))
+            if (result != undefined) {
+                generateSlider(result)
+            }
+        })
+
+
+
+    </script>
+
+    <script>
+        const btn = document.querySelector("#id_кнопки")
+        btn.addEventListener("click", () => {
+            window.location = "ссылка"
+        })
+    </script>
+
+
+</body>
+
+</html>
